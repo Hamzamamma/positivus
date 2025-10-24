@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة المبدعين العرب - أنشئ متجرك الإلكتروني</title>
+
+    <!-- Google Fonts - Arabic Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /**
+         * ============================================
+         * ARAB CREATORS PLATFORM - HOMEPAGE
+         * Inspired by Positivus Design System
+         * RTL Support for Arabic Language
+         * ============================================
+         */
+
+        /* CSS RESET */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /**
+         * ============================================
+         * DESIGN SYSTEM - PRIMITIVES
+         * From Positivus/Fourthwall
+         * ============================================
+         */
+
+        :root {
+            /* Color System - Gray Scale */
+            --color-gray-100: #ffffff;
+            --color-gray-200: #fafafa;
+            --color-gray-250: #f8f8f8;
+            --color-gray-300: #f2f2f2;
+            --color-gray-350: #eeeeee;
+            --color-gray-400: #d9d9d9;
+            --color-gray-500: #bfbfbf;
+            --color-gray-600: #a6a6a6;
+            --color-gray-700: #8c8c8c;
+            --color-gray-800: #737373;
+            --color-gray-900: #595959;
+            --color-gray-1000: #404040;
+            --color-gray-1100: #262626;
+            --color-gray-1200: #141414;
+            --color-gray-1300: #000000;
+
+            /* Color System - Green (Primary) */
+            --color-green-100: #e6f7f4;
+            --color-green-200: #b3e6dc;
+            --color-green-300: #80d4c4;
+            --color-green-400: #4dc3ac;
+            --color-green-500: #33b59a;
+            --color-green-600: #29a389;
+            --color-green-700: #218973;
+            --color-green-800: #1a6f5d;
+            --color-green-900: #125546;
+
+            /* Color System - Blue */
+            --color-blue-100: #e6ecff;
+            --color-blue-200: #b3caff;
+            --color-blue-300: #80a8ff;
+            --color-blue-400: #4d85ff;
+            --color-blue-500: #2668ff;
+            --color-blue-600: #0042ff;
+            --color-blue-700: #0035cc;
+            --color-blue-800: #002899;
+            --color-blue-900: #001a66;
+
+            /* Color System - Purple */
+            --color-purple-100: #f2e6ff;
+            --color-purple-200: #d9b3ff;
+            --color-purple-300: #c080ff;
+            --color-purple-400: #a64dff;
+            --color-purple-500: #9426ff;
+            --color-purple-600: #7000f7;
+            --color-purple-700: #5a00c7;
+            --color-purple-800: #450099;
+            --color-purple-900: #2f006b;
+
+            /* Color System - Orange */
+            --color-orange-100: #ffe8e6;
+            --color-orange-200: #ffbfb3;
+            --color-orange-300: #ff9680;
+            --color-orange-400: #ff6d4d;
+            --color-orange-500: #ff5626;
+            --color-orange-600: #ff4700;
+
+            /* Spacing System */
+            --space-0: 0px;
+            --space-25: 2px;
+            --space-50: 4px;
+            --space-75: 6px;
+            --space-100: 8px;
+            --space-150: 12px;
+            --space-200: 16px;
+            --space-250: 20px;
+            --space-300: 24px;
+            --space-350: 28px;
+            --space-400: 32px;
+            --space-450: 36px;
+            --space-500: 40px;
+            --space-600: 48px;
+            --space-700: 56px;
+            --space-800: 64px;
+            --space-900: 72px;
+            --space-1000: 80px;
+            --space-1200: 96px;
+            --space-1400: 112px;
+            --space-1600: 128px;
+
+            /* Typography */
+            --font-family-body: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --font-family-heading: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+            --font-size-50: 11px;
+            --font-size-75: 12px;
+            --font-size-100: 14px;
+            --font-size-200: 16px;
+            --font-size-300: 18px;
+            --font-size-400: 20px;
+            --font-size-500: 24px;
+            --font-size-600: 28px;
+            --font-size-700: 32px;
+            --font-size-800: 40px;
+            --font-size-900: 48px;
+            --font-size-1000: 56px;
+            --font-size-1100: 64px;
+
+            --line-height-100: 1.2;
+            --line-height-200: 1.4;
+            --line-height-300: 1.5;
+            --line-height-400: 1.6;
+            --line-height-500: 1.8;
+
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 24px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Base Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-200);
+            line-height: var(--line-height-400);
+            color: var(--color-gray-1100);
+            background: var(--color-gray-100);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="ltr"] {
+            text-align: left;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-300);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 var(--space-600);
+            }
+        }
+
+        /**
+         * ============================================
+         * NAVBAR
+         * ============================================
+         */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--color-gray-100);
+            border-bottom: 1px solid var(--color-gray-350);
+            padding: var(--space-200) 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: var(--font-size-500);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-green-600);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-100);
+        }
+
+        .navbar-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--color-green-600), var(--color-green-700));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .navbar-menu {
+            display: none;
+            gap: var(--space-400);
+            list-style: none;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-menu {
+                display: flex;
+            }
+        }
+
+        .navbar-link {
+            color: var(--color-gray-900);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            padding: var(--space-100) var(--space-150);
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+        }
+
+        .navbar-link:hover {
+            color: var(--color-green-600);
+            background: var(--color-green-100);
+        }
+
+        .navbar-actions {
+            display: flex;
+            gap: var(--space-150);
+            align-items: center;
+        }
+
+        .lang-switch {
+            background: var(--color-gray-250);
+            border: none;
+            padding: var(--space-100) var(--space-200);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-100);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-gray-900);
+            transition: all 0.2s;
+        }
+
+        .lang-switch:hover {
+            background: var(--color-gray-350);
+        }
+
+        .btn {
+            padding: var(--space-150) var(--space-300);
+            border-radius: var(--radius-md);
+            font-family: var(--font-family-body);
+            font-size: var(--font-size-200);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-100);
+        }
+
+        .btn-primary {
+            background: var(--color-green-600);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-green-700);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-green-600);
+            border: 2px solid var(--color-green-600);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-green-600);
+            color: white;
+        }
+
+        .btn-large {
+            padding: var(--space-250) var(--space-500);
+            font-size: var(--font-size-300);
+        }
+
+        /**
+         * ============================================
+         * HERO SECTION
+         * ============================================
+         */
+
+        .hero {
+            padding-top: calc(80px + var(--space-1000));
+            padding-bottom: var(--space-1200);
+            background: linear-gradient(135deg, var(--color-green-100) 0%, var(--color-blue-100) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--color-purple-100) 0%, transparent 70%);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-100);
+            background: white;
+            padding: var(--space-100) var(--space-250);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-100);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-green-700);
+            margin-bottom: var(--space-400);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--color-green-600);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .hero-title {
+            font-size: var(--font-size-900);
+            font-weight: var(--font-weight-bold);
+            line-height: var(--line-height-100);
+            color: var(--color-gray-1200);
+            margin-bottom: var(--space-400);
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: var(--font-size-1100);
+            }
+        }
+
+        .hero-title-highlight {
+            background: linear-gradient(135deg, var(--color-green-600), var(--color-blue-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: var(--font-size-400);
+            line-height: var(--line-height-400);
+            color: var(--color-gray-900);
+            margin-bottom: var(--space-600);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-300);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-800);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-400);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: var(--font-size-700);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-green-600);
+            display: block;
+            margin-bottom: var(--space-50);
+        }
+
+        .hero-stat-label {
+            font-size: var(--font-size-100);
+            color: var(--color-gray-800);
+        }
+
+        /**
+         * ============================================
+         * FEATURES SECTION
+         * ============================================
+         */
+
+        .features {
+            padding: var(--space-1200) 0;
+            background: var(--color-gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-800);
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--color-green-100);
+            color: var(--color-green-700);
+            padding: var(--space-100) var(--space-250);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-100);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-300);
+        }
+
+        .section-title {
+            font-size: var(--font-size-800);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-1200);
+            margin-bottom: var(--space-300);
+        }
+
+        .section-description {
+            font-size: var(--font-size-300);
+            color: var(--color-gray-800);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-400);
+        }
+
+        .feature-card {
+            background: white;
+            padding: var(--space-500);
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--color-gray-300);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-green-600), var(--color-blue-600));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--color-green-300);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-700);
+            margin-bottom: var(--space-300);
+        }
+
+        .feature-icon-green {
+            background: linear-gradient(135deg, var(--color-green-100), var(--color-green-200));
+            color: var(--color-green-700);
+        }
+
+        .feature-icon-blue {
+            background: linear-gradient(135deg, var(--color-blue-100), var(--color-blue-200));
+            color: var(--color-blue-700);
+        }
+
+        .feature-icon-purple {
+            background: linear-gradient(135deg, var(--color-purple-100), var(--color-purple-200));
+            color: var(--color-purple-700);
+        }
+
+        .feature-icon-orange {
+            background: linear-gradient(135deg, var(--color-orange-100), var(--color-orange-200));
+            color: var(--color-orange-600);
+        }
+
+        .feature-title {
+            font-size: var(--font-size-400);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-1100);
+            margin-bottom: var(--space-200);
+        }
+
+        .feature-description {
+            font-size: var(--font-size-200);
+            color: var(--color-gray-800);
+            line-height: var(--line-height-400);
+        }
+
+        /**
+         * ============================================
+         * HOW IT WORKS SECTION
+         * ============================================
+         */
+
+        .how-it-works {
+            padding: var(--space-1200) 0;
+            background: var(--color-gray-250);
+        }
+
+        .steps {
+            display: grid;
+            gap: var(--space-600);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: var(--space-400);
+            align-items: flex-start;
+        }
+
+        @media (max-width: 767px) {
+            .step {
+                flex-direction: column;
+            }
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--color-green-600), var(--color-green-700));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-600);
+            font-weight: var(--font-weight-bold);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-content {
+            flex: 1;
+            background: white;
+            padding: var(--space-400);
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--color-gray-300);
+        }
+
+        .step-title {
+            font-size: var(--font-size-500);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-1100);
+            margin-bottom: var(--space-200);
+        }
+
+        .step-description {
+            font-size: var(--font-size-200);
+            color: var(--color-gray-800);
+            line-height: var(--line-height-400);
+        }
+
+        /**
+         * ============================================
+         * PRICING SECTION
+         * ============================================
+         */
+
+        .pricing {
+            padding: var(--space-1200) 0;
+            background: var(--color-gray-100);
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-500);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: var(--space-600);
+            border-radius: var(--radius-xl);
+            border: 2px solid var(--color-gray-300);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--color-green-600);
+            border-width: 3px;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: var(--space-300);
+            left: var(--space-300);
+            background: var(--color-green-600);
+            color: white;
+            padding: var(--space-50) var(--space-200);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-75);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        [dir="rtl"] .pricing-badge {
+            right: var(--space-300);
+            left: auto;
+        }
+
+        .pricing-name {
+            font-size: var(--font-size-500);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-1100);
+            margin-bottom: var(--space-200);
+        }
+
+        .pricing-price {
+            font-size: var(--font-size-800);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-green-600);
+            margin-bottom: var(--space-100);
+        }
+
+        .pricing-period {
+            font-size: var(--font-size-200);
+            color: var(--color-gray-700);
+            margin-bottom: var(--space-500);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--space-500);
+        }
+
+        .pricing-feature {
+            padding: var(--space-150) 0;
+            color: var(--color-gray-800);
+            display: flex;
+            gap: var(--space-150);
+            align-items: flex-start;
+        }
+
+        .pricing-feature::before {
+            content: '✓';
+            color: var(--color-green-600);
+            font-weight: var(--font-weight-bold);
+            flex-shrink: 0;
+        }
+
+        /**
+         * ============================================
+         * CTA SECTION
+         * ============================================
+         */
+
+        .cta {
+            padding: var(--space-1200) 0;
+            background: linear-gradient(135deg, var(--color-green-600), var(--color-blue-600));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: var(--font-size-800);
+            font-weight: var(--font-weight-bold);
+            color: white;
+            margin-bottom: var(--space-400);
+        }
+
+        .cta-description {
+            font-size: var(--font-size-400);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-600);
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: var(--space-300);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--color-green-600);
+        }
+
+        .btn-white:hover {
+            background: var(--color-gray-250);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: var(--color-green-600);
+        }
+
+        /**
+         * ============================================
+         * FOOTER
+         * ============================================
+         */
+
+        .footer {
+            background: var(--color-gray-1200);
+            color: var(--color-gray-400);
+            padding: var(--space-800) 0 var(--space-400);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-600);
+            margin-bottom: var(--space-600);
+        }
+
+        .footer-section-title {
+            font-size: var(--font-size-300);
+            font-weight: var(--font-weight-bold);
+            color: white;
+            margin-bottom: var(--space-300);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-200);
+        }
+
+        .footer-link {
+            color: var(--color-gray-400);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--color-green-400);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-gray-1000);
+            padding-top: var(--space-400);
+            text-align: center;
+            font-size: var(--font-size-100);
+        }
+
+        .footer-logo {
+            font-size: var(--font-size-500);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-green-400);
+            margin-bottom: var(--space-200);
+        }
+
+        .footer-description {
+            font-size: var(--font-size-100);
+            line-height: var(--line-height-400);
+            color: var(--color-gray-500);
+        }
+
+        /**
+         * ============================================
+         * UTILITIES
+         * ============================================
+         */
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-8 {
+            margin-top: var(--space-800);
+        }
+
+        .hidden-mobile {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .hidden-mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="navbar-logo">
+                <div class="navbar-logo-icon">ع</div>
+                <span>منصة المبدعين</span>
+            </a>
+
+            <ul class="navbar-menu">
+                <li><a href="#features" class="navbar-link">المميزات</a></li>
+                <li><a href="#how-it-works" class="navbar-link">كيف تعمل</a></li>
+                <li><a href="#pricing" class="navbar-link">الأسعار</a></li>
+                <li><a href="#contact" class="navbar-link">تواصل معنا</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="lang-switch" onclick="toggleLanguage()">English</button>
+                <a href="#" class="btn btn-primary">ابدأ الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    منصة المبدعين العرب الأولى
+                </div>
+
+                <h1 class="hero-title">
+                    حول شغفك إلى<br>
+                    <span class="hero-title-highlight">دخل مستدام</span>
+                </h1>
+
+                <p class="hero-description">
+                    منصة متكاملة للمبدعين العرب لبناء متاجرهم الإلكترونية، بيع المنتجات، إدارة الاشتراكات، وتحقيق دخل مستمر من محتواهم
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-large">ابدأ مجاناً</a>
+                    <a href="#how-it-works" class="btn btn-secondary btn-large">شاهد كيف تعمل</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">+10,000</span>
+                        <span class="hero-stat-label">مبدع نشط</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">$5M+</span>
+                        <span class="hero-stat-label">إيرادات المبدعين</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">+50,000</span>
+                        <span class="hero-stat-label">منتج مباع</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">المميزات</span>
+                <h2 class="section-title">كل ما تحتاجه لتنمية أعمالك</h2>
+                <p class="section-description">
+                    منصة شاملة مصممة خصيصاً للمبدعين العرب مع أدوات احترافية وسهلة الاستخدام
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-green">🛍️</div>
+                    <h3 class="feature-title">متجر إلكتروني متكامل</h3>
+                    <p class="feature-description">
+                        أنشئ متجرك الخاص ببضع نقرات. بيع المنتجات الرقمية والمادية بسهولة مع نظام إدارة متقدم
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-blue">👥</div>
+                    <h3 class="feature-title">نظام العضويات</h3>
+                    <p class="feature-description">
+                        قدم اشتراكات شهرية لمتابعيك مع محتوى حصري ومزايا خاصة لبناء دخل متكرر ومستقر
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-purple">💳</div>
+                    <h3 class="feature-title">مدفوعات آمنة</h3>
+                    <p class="feature-description">
+                        نظام دفع متكامل يدعم جميع البطاقات والمحافظ الإلكترونية مع حماية كاملة للمعاملات
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-orange">📊</div>
+                    <h3 class="feature-title">تحليلات متقدمة</h3>
+                    <p class="feature-description">
+                        لوحة تحكم شاملة لمتابعة المبيعات، الإيرادات، وسلوك العملاء مع تقارير تفصيلية
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-green">🎨</div>
+                    <h3 class="feature-title">تصميم قابل للتخصيص</h3>
+                    <p class="feature-description">
+                        خصص متجرك بالكامل ليعكس هويتك البصرية مع قوالب احترافية جاهزة للاستخدام
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon feature-icon-blue">📱</div>
+                    <h3 class="feature-title">تطبيق موبايل</h3>
+                    <p class="feature-description">
+                        أدر أعمالك من أي مكان مع تطبيق الموبايل المتاح على iOS و Android
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">كيف تعمل</span>
+                <h2 class="section-title">ابدأ في 3 خطوات بسيطة</h2>
+                <p class="section-description">
+                    من التسجيل إلى أول عملية بيع في دقائق معدودة
+                </p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">أنشئ حسابك مجاناً</h3>
+                        <p class="step-description">
+                            سجل بياناتك الأساسية وابدأ في إعداد متجرك خلال دقائق. لا حاجة لبطاقة ائتمان للبدء
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">أضف منتجاتك وصمم متجرك</h3>
+                        <p class="step-description">
+                            ارفع منتجاتك الرقمية أو المادية، اختر تصميم متجرك، وخصصه ليعكس هويتك الفريدة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">ابدأ البيع واربح المال</h3>
+                        <p class="step-description">
+                            شارك رابط متجرك مع متابعيك وابدأ في تحقيق الأرباح. نحن نهتم بكل التفاصيل التقنية
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الأسعار</span>
+                <h2 class="section-title">خطط مرنة تناسب جميع المبدعين</h2>
+                <p class="section-description">
+                    اختر الخطة المناسبة لك وابدأ اليوم. يمكنك الترقية أو التخفيض في أي وقت
+                </p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3 class="pricing-name">المبتدئ</h3>
+                    <div class="pricing-price">مجاناً</div>
+                    <div class="pricing-period">للأبد</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">حتى 10 منتجات</li>
+                        <li class="pricing-feature">عمولة 10% على المبيعات</li>
+                        <li class="pricing-feature">لوحة تحكم أساسية</li>
+                        <li class="pricing-feature">دعم فني عبر البريد</li>
+                        <li class="pricing-feature">قالب متجر واحد</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">ابدأ مجاناً</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">الأكثر شعبية</div>
+                    <h3 class="pricing-name">المحترف</h3>
+                    <div class="pricing-price">$29<span style="font-size: var(--font-size-400);">/شهر</span></div>
+                    <div class="pricing-period">أو $290 سنوياً (وفّر 17%)</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">منتجات غير محدودة</li>
+                        <li class="pricing-feature">عمولة 5% فقط</li>
+                        <li class="pricing-feature">تحليلات متقدمة</li>
+                        <li class="pricing-feature">دعم فني ذو أولوية</li>
+                        <li class="pricing-feature">جميع القوالب</li>
+                        <li class="pricing-feature">نظام العضويات</li>
+                        <li class="pricing-feature">تخصيص كامل</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">ابدأ تجربة مجانية</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3 class="pricing-name">المؤسسي</h3>
+                    <div class="pricing-price">مخصص</div>
+                    <div class="pricing-period">حسب احتياجاتك</div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature">كل ميزات المحترف</li>
+                        <li class="pricing-feature">بدون عمولة</li>
+                        <li class="pricing-feature">مدير حساب مخصص</li>
+                        <li class="pricing-feature">تكامل API مخصص</li>
+                        <li class="pricing-feature">دعم فني 24/7</li>
+                        <li class="pricing-feature">تدريب خاص</li>
+                        <li class="pricing-feature">SLA مضمون</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">جاهز لبدء رحلتك؟</h2>
+                <p class="cta-description">
+                    انضم إلى آلاف المبدعين العرب الذين يحققون دخلاً مستداماً من شغفهم
+                </p>
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-white btn-large">ابدأ مجاناً الآن</a>
+                    <a href="#" class="btn btn-outline-white btn-large">تحدث مع فريقنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">منصة المبدعين</div>
+                    <p class="footer-description">
+                        المنصة الأولى للمبدعين العرب لتحويل شغفهم إلى دخل مستدام
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-section-title">المنتج</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">المميزات</a></li>
+                        <li><a href="#" class="footer-link">الأسعار</a></li>
+                        <li><a href="#" class="footer-link">قصص النجاح</a></li>
+                        <li><a href="#" class="footer-link">التحديثات</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-section-title">الموارد</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">مركز المساعدة</a></li>
+                        <li><a href="#" class="footer-link">المدونة</a></li>
+                        <li><a href="#" class="footer-link">دليل البداية</a></li>
+                        <li><a href="#" class="footer-link">API</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-section-title">الشركة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">من نحن</a></li>
+                        <li><a href="#" class="footer-link">الوظائف</a></li>
+                        <li><a href="#" class="footer-link">تواصل معنا</a></li>
+                        <li><a href="#" class="footer-link">الشركاء</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 منصة المبدعين العرب. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Language Toggle Function
+         */
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('lang');
+            const currentDir = html.getAttribute('dir');
+
+            if (currentLang === 'ar') {
+                // Switch to English
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+
+                // Update content (you can expand this with full translations)
+                document.querySelector('.navbar-logo span').textContent = 'Creators Platform';
+                document.querySelector('.lang-switch').textContent = 'العربية';
+                document.querySelector('.hero-title').innerHTML = 'Turn Your Passion Into<br><span class="hero-title-highlight">Sustainable Income</span>';
+
+            } else {
+                // Switch to Arabic
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+
+                document.querySelector('.navbar-logo span').textContent = 'منصة المبدعين';
+                document.querySelector('.lang-switch').textContent = 'English';
+                document.querySelector('.hero-title').innerHTML = 'حول شغفك إلى<br><span class="hero-title-highlight">دخل مستدام</span>';
+            }
+        }
+
+        /**
+         * Smooth scroll for navigation links
+         */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /**
+         * Navbar background on scroll
+         */
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
